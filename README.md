@@ -97,8 +97,23 @@ Este projeto está sob a licença MIT.
 
 
 
-Use a extensão chamada "EditThisCookie", para exportar os cookies do navegador para um arquivo cookies.json. Após isso você deve corrigir o arquivo em alguma IA, user a Qwen2.5-Max para corrigir, pois ele deve apresentar o erro abaixo: 
-"playwright._impl._errors.Error: BrowserContext.add_cookies: cookies[0].sameSite: expected one of (Strict|Lax|None)" 
-Breve explicação : O problema principal no seu arquivo cookies.json é que o valor do campo sameSite está definido como "no_restriction", que não é um valor válido para o Playwright. O Playwright aceita apenas os valores "Strict", "Lax" ou "None" para o campo sameSite. Além disso, alguns campos adicionais (como id, storeId, hostOnly, etc.) não são necessários e podem ser removidos.
+### 📝 **Observação Importante: Correção de Cookies para o Playwright**
 
-Vou corrigir o arquivo para você, ajustando os valores de sameSite e removendo campos desnecessários.
+Ao exportar os cookies do navegador usando a extensão **EditThisCookie**, você pode encontrar um erro ao tentar carregá-los no Playwright. O problema ocorre porque o campo `sameSite` no arquivo `cookies.json` está definido como `"no_restriction"`, que não é um valor válido para o Playwright.
+
+#### **O que está errado?**
+- O Playwright aceita apenas os seguintes valores para o campo `sameSite`:  
+  - `"Strict"`  
+  - `"Lax"`  
+  - `"None"`  
+- Além disso, alguns campos adicionais (como `id`, `storeId`, `hostOnly`, etc.) presentes no arquivo exportado não são necessários e podem ser removidos.
+
+#### **Como corrigir?**
+1. **Exporte os cookies** usando a extensão **EditThisCookie** e salve-os em um arquivo chamado `cookies.json`.
+2. **Corrija o arquivo** ajustando os valores de `sameSite` para um dos valores válidos (`"Strict"`, `"Lax"` ou `"None"`).
+3. **Remova campos desnecessários**, como `id`, `storeId`, `hostOnly`, entre outros, para garantir que o arquivo esteja limpo e compatível com o Playwright.
+4. Utilize a IA **Qwen2.5-Max** para ajudar na correção do arquivo, caso necessário.
+
+#### **Exemplo de Erro Encontrado**
+```plaintext
+playwright._impl._errors.Error: BrowserContext.add_cookies: cookies[0].sameSite: expected one of (Strict|Lax|None)
