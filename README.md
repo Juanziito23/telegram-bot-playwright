@@ -1,0 +1,5 @@
+Use a extensão chamada "EditThisCookie", para exportar os cookies do navegador para um arquivo cookies.json. Após isso você deve corrigir o arquivo em alguma IA, user a Qwen2.5-Max para corrigir, pois ele deve apresentar o erro abaixo: 
+"playwright._impl._errors.Error: BrowserContext.add_cookies: cookies[0].sameSite: expected one of (Strict|Lax|None)" 
+Breve explicação : O problema principal no seu arquivo cookies.json é que o valor do campo sameSite está definido como "no_restriction", que não é um valor válido para o Playwright. O Playwright aceita apenas os valores "Strict", "Lax" ou "None" para o campo sameSite. Além disso, alguns campos adicionais (como id, storeId, hostOnly, etc.) não são necessários e podem ser removidos.
+
+Vou corrigir o arquivo para você, ajustando os valores de sameSite e removendo campos desnecessários.

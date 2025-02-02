@@ -1,0 +1,18 @@
+# Ignorar qualquer arquivo ou pasta que contenha "dados"
+*bot.log*
+
+# Ignorar arquivos específicos
+/configuracao.csv
+/chromedriver.exe
+/cookies
+/venv
+/.env
+/cookies.json
+/launch.json
+/test_def_browser.py
+
+# Ignorar diretórios
+/.vscode/
+/src/__pycache__/
+/src/cookies/
+/src/playwright_scripts/__pycache__/
