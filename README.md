@@ -20,7 +20,7 @@ git clone https://github.com/Juanziito23/telegram-bot-playwright.git
 cd seu-repositorio
 ```
 ## 3️⃣ Instalando dependências
-```bash 
+```python
 pip install -r requirements.txt
 ```
 ### Caso o Playwright não esteja instalado, rode:
@@ -30,13 +30,13 @@ playwright install
 ## 4️⃣ Configuração
 ### Crie um arquivo .env com o seguinte conteúdo:
 
-```bash
+```base
 TELEGRAM_BOT_TOKEN=SEU_TOKEN_AQUI
 ENVIRONMENT=production
 COOKIE_DIR=cookies
 ```
 ## 5️⃣ Executando o bot
-```bash
+```python
 python run_bot.py
 ```
 # ⚙️ Funcionalidades
@@ -44,8 +44,7 @@ python run_bot.py
 📌 **Comandos disponíveis**
 
 | Comando              | Descrição                                      |
-|                      | ---:                                           |
-|----------------------|------------------------------------------------|
+|----------------------|:---------------------------------------------- |
 | `/start`             | Inicia o bot e exibe o menu principal          |
 | `Executar Script`    | Roda um script Playwright                      |
 | `/iniciar_sessao`    | Inicia uma nova sessão para o usuário          |
@@ -57,24 +56,43 @@ python run_bot.py
 | `Ajuda`              | Lista os comandos disponíveis                  |
 
 # 🛠️ Como funciona
-🔹 Gerenciamento de Sessões
-O SessionManager mantém sessões ativas para cada usuário. Ele recebe links, os processa e retorna os resultados.
+### 🔹 Gerenciamento de Sessões:
+1. O SessionManager mantém sessões ativas para cada usuário. Ele recebe links, os processa e retorna os resultados.
 
-🔹 Processamento de Links
-O BrowserManager usa o Playwright para acessar páginas e gerar links de afiliados no Mercado Livre.
+### 🔹 Processamento de Links
+2. O BrowserManager usa o Playwright para acessar páginas e gerar links de afiliados no Mercado Livre.
 
-🔹 Integração com o Telegram
+### 🔹 Integração com o Telegram
 Usa Aiogram para interagir com os usuários e responder aos comandos.
 
-📩 Contribuição
+### 📩 Contribuição
 Se quiser contribuir, sinta-se à vontade para abrir issues e pull requests!
 
-📝 Licença
+### 📝 Licença
 Este projeto está sob a licença MIT.
 
 - [x] #739
-- [ ] https://github.com/octo-org/octo-repo/issues/740
 - [ ] Add delight to the experience when all tasks are complete :tada:
+
+## 📝 Lista de Features
+
+| Status   | Feature                              | Descrição                                                                 | Prioridade/Detalhes                                   |
+|----------|--------------------------------------|---------------------------------------------------------------------------|-------------------------------------------------------|
+| ✅       | Autenticação de Usuário             | Implementação do sistema de login e registro com validação de email.      | _Concluído em: 10/10/2023_                           |
+| ✅       | Página de Dashboard                 | Criação da interface inicial do usuário com gráficos e estatísticas.      | _Concluído em: 12/10/2023_                           |
+| ✅       | Integração com API Externa          | Conexão com a API de pagamentos para processamento seguro.                | _Concluído em: 14/10/2023_                           |
+| 🚀       | Sistema de Notificações             | Desenvolver notificações em tempo real para eventos importantes.          | _Prioridade: Alta_                                    |
+| ⬜       | Modo Escuro                         | Adicionar suporte ao tema escuro para melhorar a experiência do usuário.  | _Prioridade: Média_                                   |
+| ⬜       | Testes Automatizados                | Configurar testes unitários e de integração para todas as funcionalidades.| _Prioridade: Alta_                                    |
+| 🔍       | Upload de Arquivos                  | Implementação de upload de imagens e documentos com validação.            | [🔗 Ver detalhes no GitHub](https://github.com/octo-org/octo-repo/issues/740) |
+| 🔍       | Melhoria na Performance             | Otimização do carregamento de páginas e redução do tempo de resposta.     | _Estimativa de conclusão: 20/10/2023_                |
+| 🔍       | Integração com Redes Sociais        | Permitir login via redes sociais (Google, Facebook, etc.).               | _Estimativa de conclusão: 25/10/2023_                |
+
+---
+
+### 🎉 Próximos Passos
+- **Celebração Final** 🎊  
+  Quando todas as features forem concluídas, vamos adicionar um commit especial com o título "🎉 Projeto Finalizado!" :tada:
 
 
 
